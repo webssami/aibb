@@ -1,0 +1,11 @@
+{
+  "note": "실제 aibb 제품 화보를 교체용 샘플로 재사용했습니다. 컬러명과 사용 제품 조합은 실제 화보 정보 보증이 아닌 샘플입니다. 운영 전 보유 원본과 권리를 확인하세요.",
+  "images": [
+    {"file": "blur-pink.jpg", "source": "기존 프로젝트 lookbook.jpg — AIBB Blur Tin Pot / OLIVE YOUNG Global"},
+    {"file": "blur-warm.jpg", "source": "기존 검색 자료 — AIBB Blur Tin Pot / OLIVE YOUNG Global"},
+    {"file": "glow-fresh.jpg", "source": "https://files.manuscdn.com/search-media/310519664071787068/b5JYfMLefnxQbKwFXIHQdM/Ga5yTddPJ7Jc7MmATBtYNn.jpg", "title": "AIBB Glow Tin Pot (13 Colors) | OLIVE YOUNG Global"},
+    {"file": "glow-pink.jpg", "source": "https://files.manuscdn.com/search-media/310519664071787068/b5JYfMLefnxQbKwFXIHQdM/GVEGw4eyEgyx4DEmYTo3NX.jpg", "title": "AIBB Glow Tin Pot (13 Colors) | OLIVE YOUNG Global"},
+    {"file": "syrup-red.jpg", "source": "기존 검색 자료 — AIBB Lip Syrup (5 Colors) / OLIVE YOUNG Global"}
+  ],
+  "brandReference": "https://aibb.co.kr/product/detail.html?product_no=15"
+}

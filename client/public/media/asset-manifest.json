@@ -1,0 +1,224 @@
+{
+  "blur": {
+    "productId": 11,
+    "primary": "/media/blur.jpg",
+    "images": [
+      "/media/blur.jpg"
+    ],
+    "alternates": [],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=11&cate_no=44&display_group=1",
+    "sources": {
+      "/media/blur.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/medium/20260831/2d80818e79ee79632d80affb1d81161d.jpg"
+    },
+    "dimensions": {
+      "/media/blur.jpg": [
+        1000,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published."
+  },
+  "glow": {
+    "productId": 15,
+    "primary": "/media/glow.jpg",
+    "images": [
+      "/media/glow.jpg"
+    ],
+    "alternates": [],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=15&cate_no=44&display_group=1",
+    "sources": {
+      "/media/glow.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/medium/20260608/4159b80a2236f414235abf8e83beaf4b.jpg"
+    },
+    "dimensions": {
+      "/media/glow.jpg": [
+        1000,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published."
+  },
+  "syrup": {
+    "productId": 32,
+    "primary": "/media/syrup.jpg",
+    "images": [
+      "/media/syrup.jpg",
+      "/media/syrup-2.jpg"
+    ],
+    "alternates": [
+      "/media/syrup-2.jpg"
+    ],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=32&cate_no=44&display_group=1",
+    "sources": {
+      "/media/syrup.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/medium/20261007/247f6ecbd8ac27d9e4e14d8078b3013d.jpg",
+      "/media/syrup-2.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/big/20261007/17b71fe49d99264e361b2fc08a85db48.jpg"
+    },
+    "dimensions": {
+      "/media/syrup.jpg": [
+        1000,
+        1000
+      ],
+      "/media/syrup-2.jpg": [
+        833,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published. Alternate is a different packshot composition, not an individual shade."
+  },
+  "sun": {
+    "productId": 26,
+    "primary": "/media/sun.jpg",
+    "images": [
+      "/media/sun.jpg"
+    ],
+    "alternates": [],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=26&cate_no=44&display_group=1",
+    "sources": {
+      "/media/sun.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/small/20260824/596feab01acdc4fcc013877d14076287.jpg"
+    },
+    "dimensions": {
+      "/media/sun.jpg": [
+        1000,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published."
+  },
+  "patch": {
+    "productId": 35,
+    "primary": "/media/patch.jpg",
+    "images": [
+      "/media/patch.jpg"
+    ],
+    "alternates": [],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=35&cate_no=44&display_group=1",
+    "sources": {
+      "/media/patch.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/big/20261007/2cb8636ac7dd274223f31a3cd57a1dab.jpg"
+    },
+    "dimensions": {
+      "/media/patch.jpg": [
+        1000,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published."
+  },
+  "blur-syrup": {
+    "productId": 34,
+    "primary": "/media/blur-syrup.jpg",
+    "images": [
+      "/media/blur-syrup.jpg"
+    ],
+    "alternates": [],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=34&cate_no=44&display_group=1",
+    "sources": {
+      "/media/blur-syrup.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/big/20261007/ce5ac33d7f443a30d4fa66b402b55006.jpg"
+    },
+    "dimensions": {
+      "/media/blur-syrup.jpg": [
+        1000,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published."
+  },
+  "glow-brush": {
+    "productId": 41,
+    "primary": "/media/glow-brush.jpg",
+    "images": [
+      "/media/glow-brush.jpg"
+    ],
+    "alternates": [],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=41&cate_no=44&display_group=1",
+    "sources": {
+      "/media/glow-brush.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/big/20261103/a4836f625f3c47cffb7c89e47a368720.jpg"
+    },
+    "dimensions": {
+      "/media/glow-brush.jpg": [
+        1000,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published."
+  },
+  "brush": {
+    "productId": 13,
+    "primary": "/media/brush.jpg",
+    "images": [
+      "/media/brush.jpg"
+    ],
+    "alternates": [],
+    "sourcePage": "https://aibb.co.kr/product/detail.html?product_no=13&cate_no=44&display_group=1",
+    "sources": {
+      "/media/brush.jpg": "https://ecimg.cafe24img.com/pg2134b22607098031/aibb/web/product/medium/20260401/9a22fa23c185b05e5e6198e3a1367175.jpg"
+    },
+    "dimensions": {
+      "/media/brush.jpg": [
+        1000,
+        1000
+      ]
+    },
+    "colorImages": {},
+    "notes": "Official catalog/detail product-only image. Static HTML exposes no per-color image mapping; duplicate gallery images not published."
+  },
+  "lookbook": {
+    "primary": "/media/lookbook.jpg",
+    "images": [
+      "/media/lookbook.jpg"
+    ],
+    "source": "/home/ubuntu/upload/search_images/2WX7DhpCLbRy.jpg",
+    "width": 1500,
+    "height": 1500,
+    "method": "Unmodified local copy supplied by parent"
+  },
+  "poster": {
+    "primary": "/media/poster.jpg",
+    "images": [
+      "/media/poster.jpg"
+    ],
+    "source": "/home/ubuntu/upload/search_images/2WX7DhpCLbRy.jpg",
+    "width": 1500,
+    "height": 1500,
+    "method": "Unmodified local copy supplied by parent"
+  },
+  "logo": {
+    "primary": "/media/logo.png",
+    "source": "User-provided AIBB PC main design",
+    "method": "Original pixels cropped; no content generated"
+  },
+  "_metadata": {
+    "method": "Known official HTML requested using browser User-Agent; bounded concurrency 5; images re-encoded as JPEG without cropping or content alteration.",
+    "glowProductId": 15,
+    "glowIdSource": "https://aibb.co.kr/product/list.html?cate_no=44&page=2",
+    "extractedImageLists": "/home/ubuntu/aibb-assets/extraction.json",
+    "inspection": "/home/ubuntu/aibb-assets/inspection.jpg",
+    "notes": "Long detail posters were not downloaded. Only the inspected product-only alternate was copied into public/media."
+  },
+  "colorSamples": {
+    "folder": "/media/colors/",
+    "note": "Existing product photo crops, not actual shade-specific photos. Replace before commercial release.",
+    "count": 48,
+    "sources": [
+      "/media/blur-collection.jpg",
+      "/media/glow-editorial.jpg",
+      "/media/syrup.jpg",
+      "/media/sun.jpg",
+      "/media/patch.jpg",
+      "/media/brush.jpg"
+    ]
+  },
+  "blurCollection": {
+    "primary": "/media/blur-collection.jpg",
+    "source": "https://files.manuscdn.com/search-media/310519664071787068/b5JYfMLefnxQbKwFXIHQdM/ni3TaA6GVNuJ5iFuNxjdtk.jpg"
+  },
+  "glowEditorial": {
+    "primary": "/media/glow-editorial.jpg",
+    "source": "https://files.manuscdn.com/search-media/310519664071787068/b5JYfMLefnxQbKwFXIHQdM/jjTnM2ZQqDzemWiSzqcNF8.jpg"
+  }
+}
