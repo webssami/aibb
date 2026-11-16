@@ -1,0 +1,17 @@
+import { ArrowLeft, ArrowUpRight, Check, Minus, Plus, ShoppingBag, Trash2, X } from 'lucide-react';
+import { Link } from 'wouter';
+import { toast } from 'sonner';
+import { formatPrice } from '@/data/products';
+import { useShop } from '@/contexts/ShopContext';
+import './Cart.css';
+
+export default function Cart() {
+  const { cart, changeQuantity, removeItem } = useShop();
+  const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const shipping = subtotal === 0 || subtotal >= 30000 ? 0 : 2500;
+  const total = subtotal + shipping;
+  const checkout = () => toast('주문 기능을 준비하고 있어요.', { description: '상품을 더 둘러본 뒤 다음 단계에서 결제를 연결할 수 있어요.' });
+
+  return <main className="cart-page"><div className="cart-shell"><header className="cart-page-heading"><Link href="/shop" className="back-link"><ArrowLeft size={18} /> SHOP으로 돌아가기</Link><div><span className="account-kicker"><ShoppingBag size={15} /> MY COLOR COLLECTION</span><h1>장바구니<em>{itemCount}</em></h1><p>마음에 든 컬러들을 한곳에 모아두었어요.</p></div></header>{!cart.length ? <section className="cart-empty"><div className="empty-orbit"><ShoppingBag size={44} strokeWidth={1.2} /></div><span className="account-kicker">YOUR NEXT COLOR</span><h2>아직 담아둔 컬러가 없어요.</h2><p>나에게 어울리는 컬러를 찾아 장바구니에 담아보세요.</p><Link href="/shop" className="primary-button">SHOP 컬러 둘러보기 <ArrowUpRight size={16} /></Link></section> : <div className="cart-layout"><section className="cart-list-panel"><div className="cart-list-heading"><h2>국내 배송 상품 <span>{itemCount}</span></h2><button onClick={() => cart.forEach(item => removeItem(item.key))}><Trash2 size={15} /> 전체 삭제</button></div><div className="shipping-banner"><Check size={17} /><span>{shipping === 0 ? '무료 배송 혜택이 적용되었어요.' : `${formatPrice(30000 - subtotal)} 더 담으면 무료 배송이에요.`}</span></div><div className="cart-item-list">{cart.map(item => <article className="full-cart-item" key={item.key}><img src={item.image} alt={item.name} /><div className="full-cart-item-main"><div className="item-title-row"><div><h3>{item.name}</h3>{item.options.map(option => <p key={option.collectionId}><i style={{ background: option.color.hex }} />{option.label} · {option.color.name}</p>)}</div><button onClick={() => removeItem(item.key)} aria-label={`${item.name} 삭제`}><X size={17} /></button></div><div className="item-bottom"><div className="quantity-stepper"><button disabled={item.quantity <= 1} onClick={() => changeQuantity(item.key, -1)} aria-label="수량 줄이기"><Minus size={13} /></button><span>{item.quantity}</span><button onClick={() => changeQuantity(item.key, 1)} aria-label="수량 늘리기"><Plus size={13} /></button></div><strong>{formatPrice(item.price * item.quantity)}</strong></div></div></article>)}</div><Link href="/shop" className="continue-link"><ArrowLeft size={15} /> 컬러 더 둘러보기</Link></section><aside className="cart-summary-panel"><div className="summary-header"><h2>결제 예정 금액</h2><span>MY CART</span></div><dl><div><dt>총 상품 금액</dt><dd>{formatPrice(subtotal)}</dd></div><div><dt>배송비</dt><dd>{shipping ? formatPrice(shipping) : '무료'}</dd></div></dl><div className="summary-total"><span>최종 결제 예정 금액</span><strong>{formatPrice(total)}</strong></div><button className="checkout-button" onClick={checkout}>주문하기 <ArrowUpRight size={17} /></button><p className="checkout-note">현재는 샘플 장바구니입니다.<br />주문·결제 기능 연결 후 실제 구매가 가능합니다.</p><div className="secure-note"><Check size={14} /> 컬러 선택 정보는 안전하게 보관돼요.</div></aside></div>}</div></main>;
+}
