@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Toaster } from 'sonner';
-import { Route, Switch, useLocation } from 'wouter';
+import { Router, Route, Switch, useLocation } from 'wouter';
 import ErrorBoundary from './components/ErrorBoundary';
 import { ShopProvider, useShop } from './contexts/ShopContext';
 import { Header, Footer } from './components/shop/SiteLayout';
@@ -57,5 +57,13 @@ function AppRoutes() {
 }
 
 export default function App() {
-  return <ErrorBoundary><ShopProvider><AppRoutes /></ShopProvider></ErrorBoundary>;
+  return (
+    <ErrorBoundary>
+      <ShopProvider>
+        <Router base="/aibb">
+          <AppRoutes />
+        </Router>
+      </ShopProvider>
+    </ErrorBoundary>
+    );
 }
