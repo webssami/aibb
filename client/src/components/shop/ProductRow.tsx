@@ -6,6 +6,7 @@ import { ArrowUpRight, ChevronDown, Plus, Minus, Check, X, Star } from 'lucide-r
 import { toast } from 'sonner';
 import { type Product, type Color, formatPrice } from '@/data/products';
 import { useShop } from '@/contexts/ShopContext';
+import { publicAsset } from '@/utils/publicAsset';
 
 export default function ProductRow({ product }: { product: Product }) {
   const { addToCart, favorites, toggleFavorite } = useShop();
@@ -121,7 +122,7 @@ const event = eventByProduct[product.id] ?? null;
 
   return <article id={`product-${product.id}`} className={`product-row ${isSet ? 'set-product' : ''}`} aria-label={product.name}>
     <div className="product-visual" style={{ '--selected-color': activeColor?.hex || '#f9eced' } as React.CSSProperties}>
-      <img key={image} src={image} alt={`${product.name}${activeColor ? ` — ${activeColor.name} 샘플 이미지` : ''}`} className="product-image" loading="lazy" />
+      <img key={image} src={publicAsset(image)} alt={`${product.name}${activeColor ? ` — ${activeColor.name} 샘플 이미지` : ''}`} className="product-image" loading="lazy" />
       <div className="image-badges">{product.id === 'syrup' && <span className="new-badge">NEW</span>}{isSet && <span className="set-badge">SET · {product.discount}% OFF</span>}</div>
       <button className={`favorite-button ${favorite ? 'is-favorite' : ''}`} onClick={() => toggleFavorite(product.id)} aria-label={`${product.name} ${favorite ? '관심상품 해제' : '관심상품 담기'}`} aria-pressed={favorite}><span className="favorite-heart-outline" aria-hidden="true">♡</span><span className="favorite-heart-filled" aria-hidden="true">♥</span></button>
       {activeColor && <div className="image-color-label"><span style={{ background: activeColor.hex }} />{activeColor.name}<Check size={12} /><small>SAMPLE</small></div>}
@@ -185,8 +186,8 @@ const event = eventByProduct[product.id] ?? null;
     </div>
 
     <img
-      src={lookbook.image}
-      alt={lookbook.alt}
+      src={publicAsset(lookbook.image)}
+  alt={lookbook.alt}
       loading="lazy"
     />
   </Link>
@@ -202,7 +203,7 @@ const event = eventByProduct[product.id] ?? null;
     {product.poster.map((posterImage, index) => (
       <img
         key={`${product.id}-poster-${index}`}
-        src={posterImage}
+        src={publicAsset(posterImage)}
         alt={`${product.name} 소개 포스터 ${index + 1}`}
         loading={index === 0 ? 'eager' : 'lazy'}
       />
