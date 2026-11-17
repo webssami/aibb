@@ -5,6 +5,7 @@ import { lookbookCategories, getLooks, nextLookIndex, type LookbookCategoryId } 
 import { products, formatPrice } from '@/data/products';
 import { useShop } from '@/contexts/ShopContext';
 import './Lookbook.css';
+import { publicAsset } from '@/utils/publicAsset';
 
 export default function Lookbook({ initialCategory = 'look1' }: { initialCategory?: LookbookCategoryId }) {
 
@@ -64,7 +65,7 @@ export default function Lookbook({ initialCategory = 'look1' }: { initialCategor
       <section className="lb-stage" role="tabpanel" id="lb-panel" aria-labelledby={`lb-tab-${category}`}>
         <figure className="lb-photo" tabIndex={0} aria-label={`${categoryInfo.label} ${look.mood} 룩북, ${index + 1}/${looks.length}. 좌우 방향키로 이동`} onKeyDown={event => { if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); moveSlide(event.key === 'ArrowRight' ? 1 : -1); } }}>
           {/* 수정 포인트: 실제 세로 룩북 화보는 lookbooks.ts의 image/imagePosition에서 교체합니다. */}
-          <img className="lb-hero-image" key={look.id} src={look.image} alt={`${categoryInfo.label} — ${look.mood} 메이크업 화보 샘플`} style={{ objectPosition: look.imagePosition || 'center' }} fetchPriority="high" />
+          <img className="lb-hero-image" key={look.id} src={publicAsset(look.image)} alt={`${categoryInfo.label} — ${look.mood} 메이크업 화보 샘플`} style={{ objectPosition: look.imagePosition || 'center' }} fetchPriority="high" />
           <span className="lb-photo-label">AIBB LOOKBOOK <span>{categoryInfo.label}</span></span>
           <button className="lb-arrow prev" onClick={() => moveSlide(-1)} aria-label="이전 룩북" disabled={looks.length < 2}><ChevronLeft size={21} strokeWidth={1.5} /></button>
           <button className="lb-arrow next" onClick={() => moveSlide(1)} aria-label="다음 룩북" disabled={looks.length < 2}><ChevronRight size={21} strokeWidth={1.5} /></button>
@@ -75,7 +76,7 @@ export default function Lookbook({ initialCategory = 'look1' }: { initialCategor
           <div className="lb-used-heading"><span>COLORS IN THIS LOOK</span></div>
           <div className="lb-used-products">
             {featured.map((item, itemIndex) => <Link key={`${look.id}-${item.productId}-${itemIndex}`} href={`/shop#product-${item.productId}`} className="lb-product" onClick={() => setQuery('')} aria-label={`${item.product.name} ${item.shadeName} 상품 보기`}>
-              <div className="lb-product-photo"><img src={item.image || item.product.image} alt={item.product.name} loading="lazy" /><span><ArrowUpRight size={14} /></span></div>
+              <div className="lb-product-photo"><img src={publicAsset(item.image || item.product.image)} alt={item.product.name} loading="lazy" /><span><ArrowUpRight size={14} /></span></div>
               <div className="lb-product-info"><h3>{item.product.name}</h3><div className="lb-shade"><i style={{ backgroundColor: item.shadeHex }} /><span>{item.shadeName}</span></div><p>{item.note}</p><div className="lb-product-link"><span>{formatPrice(item.product.price)}</span><span>상품 보기 <ArrowUpRight size={12} /></span></div></div>
             </Link>)}
           </div>
