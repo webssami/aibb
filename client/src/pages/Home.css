@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Bronova";
-  src: url("/home-fonts/Bronova Regular.woff") format("woff");
+  src: url("/aibb/home-fonts/Bronova Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Bronova";
-  src: url("/home-fonts/Bronova Bold.woff") format("woff");
+  src: url("/aibb/home-fonts/Bronova Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
