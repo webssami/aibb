@@ -4,7 +4,7 @@ import { ArrowUpRight, Instagram } from 'lucide-react';
 import { useShop } from '@/contexts/ShopContext';
 import './Home.css';
 
-const A = "/home-assets"
+const A = `${import.meta.env.BASE_URL}home-assets`
 
 type ModalName = "color" | "simulation" | null
 
