@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowUpRight, CalendarDays, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link } from 'wouter';
 import './Event.css';
+import { publicAsset } from '@/utils/publicAsset';
 
 type EventItem = {
   title: string;
@@ -52,14 +53,14 @@ export default function Event() {
         <div className="event-list" role="tabpanel">
           <div className="event-list-head"><span>{tab === '진행중' ? 'LIVE NOW' : 'EVENT ARCHIVE'}</span><b>{String(visible.length).padStart(2, '0')} ITEMS</b></div>
           {visible.map((event, index) => <button key={event.title} className={`event-card ${selected.title === event.title ? 'selected' : ''}`} onClick={() => setSelected(event)}>
-            <span className={`event-card-image tone-${event.accent}`}><img src={event.image} alt="" />{tab === '종료' && <i>EVENT<br />ENDED</i>}</span>
+            <span className={`event-card-image tone-${event.accent}`}><img src={publicAsset(event.image)} alt="" />{tab === '종료' && <i>EVENT<br />ENDED</i>}</span>
             <span className="event-card-copy"><small>{event.eyebrow}</small><strong>{event.title}</strong><span><CalendarDays size={13} /> {event.date} <b>·</b> 조회 {event.views}</span></span>
             <span className="event-card-arrow"><span>{String(index + 1).padStart(2, '0')}</span><ChevronRight size={22} /></span>
           </button>)}
         </div>
         <aside className={`event-preview tone-${selected.accent}`}>
           <div className="preview-top"><span>{selected.status === '진행중' ? 'LIVE EVENT' : 'ARCHIVE'}</span><span>✦ AIBB</span></div>
-          <div className="preview-scroll" aria-label={`${selected.title} 상세 이미지 스크롤 영역`}><div className="preview-poster"><img src={selected.detail} alt={`${selected.title} 상세 혜택`} /></div><div className="preview-copy"><small>{selected.eyebrow}</small><h2>{selected.title}</h2><p>{selected.description}</p><span className="preview-scroll-hint">위아래로 스크롤해서 혜택을 확인하세요 ↓</span></div></div>
+          <div className="preview-scroll" aria-label={`${selected.title} 상세 이미지 스크롤 영역`}><div className="preview-poster"><img src={publicAsset(selected.detail)} alt={`${selected.title} 상세 혜택`} /></div><div className="preview-copy"><small>{selected.eyebrow}</small><h2>{selected.title}</h2><p>{selected.description}</p><span className="preview-scroll-hint">위아래로 스크롤해서 혜택을 확인하세요 ↓</span></div></div>
         </aside>
       </div>
     </section>
