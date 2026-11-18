@@ -249,7 +249,7 @@ function Header({ openMenu }: { openMenu: () => void }) {
     <header className="site-header">
       <div className="header-inner">
         <a className="logo" href="#top" aria-label="AIBB 메인으로 이동">
-          <img src={`${A}/5763a.png`} alt="AIBB" />
+          <img src={`/aibb/media/5763a.png`} alt="AIBB" />
         </a>
         <nav className="desktop-nav" aria-label="주요 메뉴">
           <div
