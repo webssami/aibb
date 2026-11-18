@@ -14,7 +14,7 @@ import {
 import { useShop } from '@/contexts/ShopContext';
 
 // 수정 포인트: 기존 메인 HTML의 상단 영역은 Header 컴포넌트만 교체하면 됩니다.
-export function Wordmark({ inverted = false, src = '/media/logo.png' }: { inverted?: boolean; src?: string }) {
+export function Wordmark({ inverted = false, src = '/aibb/media/logo.png' }: { inverted?: boolean; src?: string }) {
   return <img className={`wordmark logo-image ${inverted ? 'inverted' : ''}`} src={src} alt="AIBB" />;
 }
 export function Header() {
@@ -202,7 +202,7 @@ export function Header() {
 export function Footer() {
   return <footer className="site-footer">
     <div className="footer-main">
-      <div className="footer-brand"><Link href="/"><Wordmark src="/media/logo_black.png" /></Link><p>Collectible Beauty.<br />정해진 틀 없이, 나를 위한 컬러.</p><small>이 페이지는 aibb 리뉴얼 프로젝트 샘플입니다.</small></div>
+      <div className="footer-brand"><Link href="/"><Wordmark src="/aibb/media/logo_black.png" /></Link><p>Collectible Beauty.<br />정해진 틀 없이, 나를 위한 컬러.</p><small>이 페이지는 aibb 리뉴얼 프로젝트 샘플입니다.</small></div>
       <div className="footer-center"><h3>CUSTOMER CENTER</h3><a href="tel:0328587784" className="footer-phone">032-858-7784</a><p>평일 10:00–17:00 (점심 12:00–13:00)<br />토·일·공휴일 휴무</p><div className="footer-pills"><Link href="/notice">NOTICE <ArrowUpRight size={13} /></Link><Link href="/service">FAQ <ArrowUpRight size={13} /></Link></div></div>
       <div className="footer-social"><h3>CONTACT & SOCIAL</h3><a href="mailto:aibb.mkt@bbia.co.kr">aibb.mkt@bbia.co.kr</a><a href="https://www.instagram.com/aibb_official/" target="_blank" rel="noreferrer" className="instagram-link"><Instagram size={17} /> @aibb_official <ArrowUpRight size={14} /></a><p>My color, My choice!</p></div>
     </div>
